@@ -3,7 +3,8 @@
 session_start();
 
 
-$mysqli = new mysqli('localhost', 'root', 'toors', 'crud') or die(mysqli_error($mysqli));
+//$mysqli = new mysqli('localhost', '', '', '') or die(mysqli_error($mysqli));
+$mysqli = new mysqli('remotemysql.com', '6rSjKg7jkX', 'dLHskvqcXO', '6rSjKg7jkX') or die(mysqli_error($mysqli));
 
 $id = 0;
 $updatesave = false;

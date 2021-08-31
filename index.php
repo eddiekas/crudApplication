@@ -34,7 +34,7 @@
 
     <?php
 
-    $mysqli = new mysqli('localhost', 'root', 'toors', 'crud') or die(mysqli_error($mysqli));
+    $mysqli = new mysqli('remotemysql.com', '6rSjKg7jkX', 'dLHskvqcXO', '6rSjKg7jkX') or die(mysqli_error($mysqli));
     $result = $mysqli->query("SELECT * FROM employees") or die($mysqli->error);
 
     //pre_r($result);

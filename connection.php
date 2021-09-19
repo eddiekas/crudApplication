@@ -4,7 +4,9 @@ session_start();
 
 
 //$mysqli = new mysqli('localhost', '', '', '') or die(mysqli_error($mysqli));
-$mysqli = new mysqli('remotemysql.com', '6rSjKg7jkX', 'dLHskvqcXO', '6rSjKg7jkX') or die(mysqli_error($mysqli));
+//$mysqli = new mysqli('remotemysql.com', '6rSjKg7jkX', 'dLHskvqcXO', '6rSjKg7jkX') or die(mysqli_error($mysqli));
+$mysqli = new mysqli('sql5.freesqldatabase.com', 'sql5438462', 'U7IJW7GnNi', 'sql5438462') or die(mysqli_error($mysqli));
+
 
 $id = 0;
 $updatesave = false;

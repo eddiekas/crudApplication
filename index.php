@@ -14,6 +14,52 @@
 
     <?php require_once 'connection.php'; ?>
 
+
+
+
+
+
+
+
+<?php
+
+
+$api_key = "YOUR_API_KEY";
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, 'https://api.whereby.dev/v1/meetings');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, '{
+  "endDate": "2021-11-13T19:21:00.000Z",
+  "fields": ["hostRoomUrl"]}'
+);
+
+$headers = [
+  'Authorization: Bearer ' . $api_key,
+  'Content-Type: application/json'
+];
+
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+$response = curl_exec($ch);
+$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+curl_close($ch);
+
+echo "Status code: $httpcode\n";
+$data = json_decode($response);
+echo "Room URL: ", $data->{'roomUrl'}, "\n";
+echo "Host room URL: ", $data->{'hostRoomUrl'}, "\n";
+
+?>
+
+
+
+
+
+
+
+
+
     <?php
 
     if (isset($_SESSION['message'])): ?>

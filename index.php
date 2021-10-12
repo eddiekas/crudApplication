@@ -123,14 +123,17 @@
 
 </form>
 </div>
-  <div class="row justify-content-center">
-
-    <iframe src="https://crud-appl.herokuapp.whereby.com/eddie-kasigwa/" allow="camera; microphone; fullscreen; speaker; display-capture"></iframe>
 
 
 
+</div>
 
-  </div>
+
+<div class="row justify-content-center">
+
+  <iframe src="https://crud-appl.herokuapp.whereby.com/eddie-kasigwa/" allow="camera; microphone; fullscreen; speaker; display-capture"></iframe>
+
+
 
 
 </div>

@@ -12,7 +12,7 @@
   </head>
   <body class="bg-info">
 
-    <?php require_once 'connection.php';
+    <?php
           require_once 'join.php';
           require_once 'logout.php';
           ?>
@@ -52,119 +52,7 @@
 
 
 
-    <?php
 
-    if (isset($_SESSION['message'])): ?>
-
-    <div class="alert alert-<?=$_SESSION['msg_type']?>">
-
-      <?php echo $_SESSION['message'];
-            unset($_SESSION['message']);
-       ?>
-
-    </div>
-  <?php endif; ?>
-
-
-    <div class="container">
-
-
-
-    <?php
-
-    $mysqli = new mysqli('remotemysql.com', '6rSjKg7jkX', 'dLHskvqcXO', '6rSjKg7jkX') or die(mysqli_error($mysqli));
-    //$mysqli = new mysqli('sql5.freesqldatabase.com', 'sql5438462', 'U7IJW7GnNi', 'sql5438462') or die(mysqli_error($mysqli));
-
-    $result = $mysqli->query("SELECT * FROM employees") or die($mysqli->error);
-
-    //pre_r($result);
-    // pre_r($result->fetch_assoc());
-
-    ?>
-
-    <div class="row justify-content-center">
-      <h1>cREATE, rEAD, uPDATE, dELETE</h1>
-
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Roles</th>
-            <th>Implement</th>
-          </tr>
-        </thead>
-
-        <?php
-
-        while ($row = $result->fetch_assoc()): ?>
-        <tr>
-          <td><?php echo $row['name']; ?></td>
-          <td><?php echo $row['roles']; ?></td>
-          <td><a href="index.php?update=<?php echo $row['id']; ?>"
-                  class="btn btn-success btn-sm">Update</a>
-              <a href="connection.php?delete=<?php echo $row['id']; ?>"
-                class="btn btn-danger btn-sm">Delete</a>
-
-          </td>
-        </tr>
-
-      <?php endwhile; ?>
-
-      </table>
-
-    </div>
-
-
-
-    <?php
-    function pre_r($array){
-
-      echo '<pre>';
-      print_r($array);
-      echo '</pre>';
-    }
-     ?>
-
-
-
-
-<div class="row justify-content-center">
-
-<form class="" action="connection.php" method="post">
-
-  <input type="hidden" name="id" value="<?php echo $id; ?>">
-
-<div class="form-row">
-
-  <div class="form-group col-md-6">
-  <label for="">Name: </label>
-  <input type="text" name="name" class="form-control" value="<?php echo $name; ?>" placeholder="Kindly Enter Name">
-  </div>
-
-  <div class="form-group col-md-6">
-  <label for="">Role: </label>
-  <input type="text" name="role" class="form-control" value="<?php echo $role; ?>"placeholder="Kindly Enter Role">
-  </div>
-</div>
-
-
-  <div class="form-group">
-
-    <?php if ($updatesave == true):  ?>
-      <button type="submit" class="btn btn-primary" name="finalUpdate">Update</button>
-    <?php else: ?>
-
-  <button type="submit" class="btn btn-info" name="save">Save</button>
-  <?php endif; ?>
-  </div>
-
-
-</form>
-</div>
-
-
-
-</div>
 
 
 

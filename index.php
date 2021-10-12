@@ -39,7 +39,14 @@
 
             ?>
 
+            <form class="" action="join.php" method="post">
 
+                <div class="form-group">
+
+            <class="btn btn-primary btn-lg active" role="button" aria-pressed="true" name='joins'>Join</a>
+                </div>
+
+            </form>
 
 
 

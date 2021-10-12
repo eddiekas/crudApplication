@@ -7,7 +7,7 @@ if (isset($_POST['joins']))
   // code...
   $_SESSION['joins'] = $_POST['joins'];
   $_SESSION['last_login_timestamp'] = time();
-  //header('location:index.php');
+  header('location:index.php');
 
 
 }
@@ -29,14 +29,7 @@ if (isset($_POST['joins']))
   <body>
     <h1>Join!</h1>
 
-<form class="" method="post">
 
-    <div class="form-group">
-
-<a href="index.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" name='joins'>Join</a>
-    </div>
-
-</form>
 
 
 

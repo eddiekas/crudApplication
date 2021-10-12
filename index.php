@@ -177,7 +177,7 @@ echo "Host room URL: ", $data->{'hostRoomUrl'}, "\n";
 
 <div class="row justify-content-center">
 
-  <iframe src="https://crud-appl.herokuapp.whereby.com/eddie_kasigwa/" allow="camera; microphone; fullscreen; speaker; display-capture"></iframe>
+  <iframe src="https://crud-appl.herokuapp.whereby.com/eddie-kasigwa/" allow="camera; microphone; fullscreen; speaker; display-capture"></iframe>
 
 
 

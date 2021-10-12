@@ -2,5 +2,5 @@
 <?php
   session_start();
   session_destroy();
-  header('location:join.php');
+  header('location:index.php');
  ?>

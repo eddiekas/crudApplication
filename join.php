@@ -1,19 +1,3 @@
-
-
-<?php
-session_start();
-if (isset($_POST["joins"]))
-{
-  // code...
-  $_SESSION["joins"] = $_POST["joins"];
-  $_SESSION["last_login_timestamp"] = time();
-  header('location:index.php');
-
-
-}
- ?>
-
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -24,19 +8,42 @@ if (isset($_POST["joins"]))
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Join!</title>
+    <title>CRUD!</title>
   </head>
-  <body>
-    <h1>Join!</h1>
+  <body class="bg-info">
 
-<form class="" method="post">
-    <div class="form-group">
 
-        <button type="submit" class="btn btn-primary" name="joins">Join</button>
 
-    </div>
 
-</form>
+          <?php
+          session_start();
+
+          if (isset($_SESSION["joins"]))
+          {
+            if ((time() - $_SESSION["last_login_timestamp"]) > 60)
+              {
+
+                header('location:logout.php');
+            }else{
+            echo "Give me 60 sec";
+            }
+          }else {
+            header('location:index.php');
+          }
+
+
+
+
+            ?>
+
+
+
+
+
+
+
+
+
 
 
 

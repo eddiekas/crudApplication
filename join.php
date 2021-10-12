@@ -29,7 +29,14 @@ if (isset($_POST['joins']))
   <body>
     <h1>Join!</h1>
 
+    <form class="" action="index.php" method="post">
 
+        <div class="form-group">
+
+    <class="btn btn-primary btn-lg active" role="button" aria-pressed="true" name='joins'>Join</a>
+        </div>
+
+    </form>
 
 
 

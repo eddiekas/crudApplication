@@ -31,7 +31,7 @@
 
     <h1>Join!</h1>
 
-    <form class="" action="join.php" method="post">
+    <form class="" action="index.php" method="post">
 
         <div class="form-group">
 

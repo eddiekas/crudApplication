@@ -13,12 +13,33 @@
   <body class="bg-info">
 
     <?php require_once 'connection.php';
-        
+          require_once 'join.php';
+          require_once 'logout.php';
           ?>
 
 
 
 
+          <?php
+          session_start();
+
+          if (isset($_SESSION["joins"]))
+          {
+            if ((time() - $_SESSION['last_login_timestamp']) > 120)
+              {
+
+                header('location:logout.php');
+            }else{
+            echo "Give me 60 sec";
+            }
+          }else {
+            header('location:join.php');
+          }
+
+
+
+
+            ?>
 
 
 

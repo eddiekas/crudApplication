@@ -12,45 +12,45 @@
   </head>
   <body class="bg-info">
 
-    <?php require_once 'connection.php'; ?>
+    <?php require_once 'connection.php';
+          require_once 'join.php';
+          require_once 'logout.php';
+          ?>
+
+
+          <?php
+          session_start();
+
+          if (isset($_SESSION["joins"]))
+          {
+            if ((time() - $_SESSION['last_login_timestamp']) > 60)
+              {
+
+                header('location:logout.php');
+            }else:
+            echo '<div class="row justify-content-center">
+
+                <iframe src="https://crud-appl.herokuapp.whereby.com/eddie-kasigwa/" allow="camera; microphone; fullscreen; speaker; display-capture"></iframe>
 
 
 
 
+              </div>';
+            }
+          }else {
+            header('location:join.php');
+          }
 
 
 
 
-<?php
+            ?>
+
+          <?php endif; ?>
 
 
-$api_key = "YOUR_API_KEY";
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://api.whereby.dev/v1/meetings');
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, '{
-  "endDate": "2021-11-13T19:21:00.000Z",
-  "fields": ["hostRoomUrl"]}'
-);
 
-$headers = [
-  'Authorization: Bearer ' . $api_key,
-  'Content-Type: application/json'
-];
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-$response = curl_exec($ch);
-$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-
-curl_close($ch);
-
-echo "Status code: $httpcode\n";
-$data = json_decode($response);
-echo "Room URL: ", $data->{'roomUrl'}, "\n";
-echo "Host room URL: ", $data->{'hostRoomUrl'}, "\n";
-
-?>
 
 
 
@@ -175,14 +175,7 @@ echo "Host room URL: ", $data->{'hostRoomUrl'}, "\n";
 </div>
 
 
-<div class="row justify-content-center">
 
-  <iframe src="https://crud-appl.herokuapp.whereby.com/eddie-kasigwa/" allow="camera; microphone; fullscreen; speaker; display-capture"></iframe>
-
-
-
-
-</div>
 
 
     <!-- Optional JavaScript -->

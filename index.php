@@ -23,9 +23,9 @@
           <?php
           session_start();
 
-          if (isset($_SESSION["$logins"]))
+          if ($logins == true)
           {
-            if ((time() - $_SESSION['last_login_timestamp']) > 120)
+            if ((time() - $_SESSION['last_login_timestamp']) > 60)
               {
 
                 header('location:logout.php');

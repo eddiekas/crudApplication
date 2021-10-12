@@ -21,7 +21,7 @@
     {
       // code...
       $logins == true;
-      $_SESSION['$logins'] = $_POST['$logins'];
+      $_SESSION['$joins'] = $_POST['$joins'];
       $_SESSION['last_login_timestamp'] = time();
       header('location:index.php');
 

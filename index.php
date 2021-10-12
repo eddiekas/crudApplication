@@ -12,7 +12,7 @@
   </head>
   <body class="bg-info">
 
-    <?php 
+    <?php
           require_once 'join.php';
           require_once 'logout.php';
           ?>
@@ -26,7 +26,7 @@
 
           if (isset($_SESSION["joins"]))
           {
-            if ((time() - $_SESSION['last_login_timestamp']) > 60)
+            if ((time() - $_SESSION['last_login_timestamp']) > 120)
               {
 
                 header('location:logout.php');

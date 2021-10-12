@@ -11,11 +11,9 @@
     <title>CRUD!</title>
   </head>
   <body class="bg-info">
+    <?php  session_start();?>
 
-    <?php require_once 'connection.php';
-          require_once 'join.php';
-          require_once 'logout.php';
-          ?>
+
 
 
           <?php
@@ -38,8 +36,12 @@
 
 
             ?>
+            <?php require_once 'connection.php';
+                  require_once 'join.php';
+                  require_once 'logout.php';
+                  ?>
 
-            
+
 
 
 

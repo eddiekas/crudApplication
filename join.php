@@ -1,19 +1,4 @@
 
-
-<?php
-session_start();
-if (isset($_POST['joins']))
-{
-  // code...
-  $_SESSION['joins'] = $_POST['joins'];
-  $_SESSION['last_login_timestamp'] = time();
-  header('location:index.php');
-
-
-}
- ?>
-
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,6 +12,23 @@ if (isset($_POST['joins']))
     <title>Join!</title>
   </head>
   <body>
+
+
+    <?php
+    session_start();
+    if (isset($_POST['joins']))
+    {
+      // code...
+      $_SESSION['joins'] = $_POST['joins'];
+      $_SESSION['last_login_timestamp'] = time();
+      header('location:index.php');
+
+
+    }
+     ?>
+
+
+
     <h1>Join!</h1>
 
     <form class="" action="join.php" method="post">

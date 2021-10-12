@@ -5,7 +5,7 @@ session_start();
 if (isset($_POST["joins"]))
 {
   // code...
-  //$_SESSION["name"] = $_POST["name"];
+  $_SESSION["joins"] = $_POST["joins"];
   $_SESSION['last_login_timestamp'] = time();
   header("location:index.php");
 

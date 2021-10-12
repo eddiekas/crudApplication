@@ -28,14 +28,7 @@
 
                 header('location:logout.php');
             }else:
-            echo '<div class="row justify-content-center">
-
-                <iframe src="https://crud-appl.herokuapp.whereby.com/eddie-kasigwa/" allow="camera; microphone; fullscreen; speaker; display-capture"></iframe>
-
-
-
-
-              </div>';
+            echo "Give me 60 sec";
             }
           }else {
             header('location:join.php');
@@ -46,7 +39,6 @@
 
             ?>
 
-          <?php endif; ?>
 
 
 

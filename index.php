@@ -23,7 +23,7 @@
 
           if (isset($_SESSION["joins"]))
           {
-            if ((time() - $_SESSION['last_login_timestamp']) > 60)
+            if ((time() - $_SESSION["last_login_timestamp"]) > 60)
               {
 
                 header('location:logout.php');

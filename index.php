@@ -23,7 +23,7 @@
           <?php
           session_start();
 
-          if (isset($_SESSION["joins"]))
+          if (isset($_SESSION["$logins"]))
           {
             if ((time() - $_SESSION['last_login_timestamp']) > 120)
               {

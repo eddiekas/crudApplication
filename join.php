@@ -14,12 +14,14 @@
   <body>
 
 
+    <?php  $logins = false; ?>
     <?php
     session_start();
     if (isset($_POST['joins']))
     {
       // code...
-      $_SESSION['joins'] = $_POST['joins'];
+      $logins == true;
+      $_SESSION['$logins'] = $_POST['$logins'];
       $_SESSION['last_login_timestamp'] = time();
       header('location:index.php');
 

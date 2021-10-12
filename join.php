@@ -2,12 +2,12 @@
 
 <?php
 session_start();
-if (isset($_POST["joins"]))
+if (isset($_POST['joins']))
 {
   // code...
   $_SESSION['joins'] = $_POST['joins'];
   $_SESSION['last_login_timestamp'] = time();
-  header('location:index.php');
+  //header('location:index.php');
 
 
 }

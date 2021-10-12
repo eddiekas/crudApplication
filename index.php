@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name-http-equiv="refresh" content="60;url=join.php">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -14,32 +14,9 @@
 
     <?php require_once 'connection.php';
           require_once 'join.php';
-          require_once 'logout.php';
           ?>
 
 
-
-
-          <?php
-          session_start();
-
-          if ($logins == true)
-          {
-            if ((time() - $_SESSION['last_login_timestamp']) > 60)
-              {
-
-                header('location:logout.php');
-            }else{
-            echo "Give me 60 sec";
-            }
-          }else {
-            header('location:join.php');
-          }
-
-
-
-
-            ?>
 
 
 

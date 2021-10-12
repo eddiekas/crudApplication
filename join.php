@@ -14,21 +14,6 @@
   <body>
 
 
-    <?php  $logins = false; ?>
-    <?php
-    session_start();
-    if (isset($_POST['joins']))
-    {
-      // code...
-      $logins == true;
-      $_SESSION['$joins'] = $_POST['$joins'];
-      $_SESSION['last_login_timestamp'] = time();
-      header('location:index.php');
-
-
-    }
-     ?>
-
 
 
     <h1>Join!</h1>
@@ -37,7 +22,7 @@
 
         <div class="form-group">
 
-<button type="submit" class="btn btn-primary" name="joins">Join</button>
+<button type="submit" class="btn btn-primary" name="joins" href="index.php">Join</button>
         </div>
 
     </form>

@@ -29,10 +29,10 @@ if (isset($_POST["joins"]))
   <body>
     <h1>Join!</h1>
 
-<form class="" method="post">
+<form class="" action="index.php" method="post">
     <div class="form-group">
 
-        <button type="submit" class="btn btn-primary" name="joins ">Join</button>
+        <button type="submit" class="btn btn-primary" name="joins">Join</button>
 
     </div>
 

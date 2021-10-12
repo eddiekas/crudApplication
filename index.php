@@ -27,7 +27,7 @@
               {
 
                 header('location:logout.php');
-            }else:
+            }else{
             echo "Give me 60 sec";
             }
           }else {

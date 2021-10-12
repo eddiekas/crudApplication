@@ -125,7 +125,7 @@
 </div>
   <div class="row justify-content-center">
 
-    <iframe src="https://crud-appl.herokuapp.com/.whereby.com/eddie-kasigwa/" allow="camera; microphone; fullscreen; speaker; display-capture"></iframe>
+    <iframe src="https://crud-appl.herokuapp.whereby.com/eddie-kasigwa/" allow="camera; microphone; fullscreen; speaker; display-capture"></iframe>
 
 
 

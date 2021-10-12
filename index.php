@@ -1,25 +1,4 @@
-<?php
-      require_once 'join.php';
-      require_once 'logout.php';
-      ?>
 
-
-
-
-
-
-<?php
-session_start();
-if (isset($_POST["joins"]))
-{
-  // code...
-  $_SESSION["joins"] = $_POST["joins"];
-  $_SESSION["last_login_timestamp"] = time();
-  header('location:join.php');
-
-
-}
- ?>
 
 
 <!doctype html>
@@ -35,6 +14,33 @@ if (isset($_POST["joins"]))
     <title>Join!</title>
   </head>
   <body>
+    <?php
+          require_once 'join.php';
+          require_once 'logout.php';
+          ?>
+
+
+
+
+
+
+    <?php
+    session_start();
+    if (isset($_POST["joins"]))
+    {
+      // code...
+      $_SESSION["joins"] = $_POST["joins"];
+      $_SESSION["last_login_timestamp"] = time();
+      header('location:join.php');
+
+
+    }
+     ?>
+
+
+
+
+
     <h1>Join!</h1>
 
 <form class="" method="post">

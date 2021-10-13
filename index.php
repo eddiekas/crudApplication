@@ -13,7 +13,6 @@
   <body class="bg-info">
 
     <?php require_once 'connection.php';
-          require_once 'join.php';
           require_once 'logout.php';
           ?>
 

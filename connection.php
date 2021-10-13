@@ -32,7 +32,7 @@ if (isset($_POST['save']) && !empty($_POST['name']) && !empty($_POST['role'])) {
   $_SESSION['message'] = "Record has been saved!";
   $_SESSION['msg_type'] = "info";
 
-  header("location:join.php");
+  header("location:index.php");
 
 }elseif (isset($_POST['save'])) {
 

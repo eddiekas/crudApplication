@@ -23,7 +23,7 @@
           <?php
           session_start();
 
-          if (isset($_SESSION['save']))
+          if (isset($_SESSION['name']))
           {
             if ((time() - $_SESSION['last_login_timestamp']) > 60)
               {

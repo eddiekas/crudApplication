@@ -25,13 +25,14 @@ if (isset($_POST['save']) && !empty($_POST['name']) && !empty($_POST['role'])) {
   $mysqli->query("INSERT INTO employees (name, roles) VALUES('$name', '$role')")
   or die($mysqli->error());
 
-  $_SESSION['save'] = $_POST['save'];
+
+  $_SESSION['name'] = $_POST['name'];
   $_SESSION['last_login_timestamp'] = time();
 
   $_SESSION['message'] = "Record has been saved!";
   $_SESSION['msg_type'] = "info";
 
-  header("location:join.php");
+  header("location:index.php");
 
 }elseif (isset($_POST['save'])) {
 

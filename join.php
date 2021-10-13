@@ -12,14 +12,16 @@
     <title>Join!</title>
   </head>
   <body>
+<?php require_once 'connection.php';
+require_once 'index.php' ?>
 
 
-  
+
 
 
     <h1>Join!</h1>
 
-    <form class="" action="index.php" method="post">
+    <form class=""  method="post">
 
         <div class="form-group">
 

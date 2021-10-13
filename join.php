@@ -14,7 +14,7 @@
   <body>
 
 
-    
+  
 
 
     <h1>Join!</h1>
@@ -23,7 +23,7 @@
 
         <div class="form-group">
 
-          <button type="submit" class="btn btn-primary" name="joins">Join</button>
+<button type="submit" class="btn btn-primary" name="joins">Join</button>
         </div>
 
     </form>

@@ -12,8 +12,7 @@
     <title>Join!</title>
   </head>
   <body>
-<?php require_once 'connection.php';
- ?>
+
 
 
 

@@ -17,10 +17,10 @@
           require_once 'logout.php';
           ?>
 
+<?php session_start(); ?>
 
 
 
-        
 
 
 

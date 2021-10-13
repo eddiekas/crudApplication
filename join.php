@@ -13,7 +13,7 @@
   </head>
   <body>
 <?php require_once 'connection.php';
-require_once 'index.php' ?>
+ ?>
 
 
 

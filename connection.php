@@ -26,8 +26,7 @@ if (isset($_POST['save']) && !empty($_POST['name']) && !empty($_POST['role'])) {
   or die($mysqli->error());
 
 
-  // $_SESSION['name'] = $_POST['name'];
-  // $_SESSION['last_login_timestamp'] = time();
+
 
   $_SESSION['message'] = "Record has been saved!";
   $_SESSION['msg_type'] = "info";
